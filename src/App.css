@@ -238,3 +238,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .answer:hover,
+  .answer.active {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+}
