@@ -223,3 +223,18 @@
   border-radius: 50%;
   margin-bottom: 30px;
 }
+
+.buttonAgain {
+  width: 200px;
+  height: 30px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}

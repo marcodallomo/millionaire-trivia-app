@@ -41,15 +41,24 @@ function App() {
     questionNumber > 15 && setStop(true);
   }, [moneyPyramid, questionNumber]);
 
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
+
   return (
     <div className="app">
       {username ? (
         <>
           <div className="main">
             {stop ? (
-              <h1 className="endText">
-                {username}, You earned: {earned} {questionNumber > 15 && jackPot()} {questionNumber > 15 && <h2>YOU WON THE JACKPOT!!!</h2>}
-              </h1>
+              <>
+                <h1 className="endText">
+                  {username}, You earned: {earned} {questionNumber > 15 && jackPot()} {questionNumber > 15 && <h2>YOU WON THE JACKPOT!!!</h2>}
+                </h1>
+                <button className="buttonAgain" onClick={refreshPage}>
+                  Play again
+                </button>
+              </>
             ) : (
               <>
                 <div className="top">
