@@ -13,6 +13,14 @@ const Trivia = ({ data, setStop, questionNumber, setQuestionNumber }) => {
   const [correctAnswer] = useSound(correct);
   const [wrongAnswer] = useSound(wrong);
 
+  const clearSelection = () => {
+    if (window.getSelection) {
+      window.getSelection().removeAllRanges();
+    } else if (document.selection) {
+      document.selection.empty();
+    }
+  };
+
   useEffect(() => {
     letsPlay();
   }, [letsPlay]);
@@ -37,7 +45,7 @@ const Trivia = ({ data, setStop, questionNumber, setQuestionNumber }) => {
         delay(1000, () => {
           setQuestionNumber((prev) => prev + 1);
           setSelectedAnswer(null);
-          window.getSelection().removeAllRanges();
+          clearSelection();
         });
       } else {
         wrongAnswer();
