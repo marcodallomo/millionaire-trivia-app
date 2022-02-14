@@ -245,3 +245,12 @@
     background: linear-gradient(#0e0124, #22074d);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .userId {
+    position: absolute;
+
+    top: 70px;
+    right: 20px;
+  }
+}
