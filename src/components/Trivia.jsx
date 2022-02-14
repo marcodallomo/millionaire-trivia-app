@@ -37,7 +37,7 @@ const Trivia = ({ data, setStop, questionNumber, setQuestionNumber }) => {
         delay(1000, () => {
           setQuestionNumber((prev) => prev + 1);
           setSelectedAnswer(null);
-          getSelection().removeAllRanges();
+          window.getSelection().removeAllRanges();
         });
       } else {
         wrongAnswer();
