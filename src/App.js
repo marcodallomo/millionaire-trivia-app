@@ -9,7 +9,7 @@ import applause from "./assets/applause-01.mp3";
 
 function App() {
   const [username, setUsername] = useState(null);
-  const [questionNumber, setQuestionNumber] = useState(14);
+  const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
   const [earned, setEarned] = useState("$ 0");
   const [jackPot] = useSound(applause);
