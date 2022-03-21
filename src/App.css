@@ -267,4 +267,10 @@
   .imageStart {
     width: 70vw;
   }
+  .moneyListItemNumber {
+    font-size: 16px;
+  }
+  .moneyListItemAmmount {
+    font-size: 18px;
+  }
 }
