@@ -273,4 +273,7 @@
   .moneyListItemAmmount {
     font-size: 18px;
   }
+  .main {
+    width: 70%;
+  }
 }
