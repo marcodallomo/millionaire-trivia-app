@@ -5,6 +5,7 @@ const Start = ({ setUsername }) => {
 
   const handleClick = () => {
     inputRef.current.value && setUsername(inputRef.current.value);
+    localStorage.setItem("currentUser", inputRef.current.value);
   };
 
   return (

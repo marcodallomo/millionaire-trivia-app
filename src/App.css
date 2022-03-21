@@ -222,6 +222,16 @@
 .imageStart {
   border-radius: 50%;
   margin-bottom: 30px;
+  animation: spin 180s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3600deg);
+  }
 }
 
 .buttonAgain {
@@ -237,6 +247,7 @@
   bottom: 200px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -252,5 +263,8 @@
 
     top: 70px;
     right: 20px;
+  }
+  .imageStart {
+    width: 70vw;
   }
 }

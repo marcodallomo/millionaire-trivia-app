@@ -5,21 +5,36 @@ import play from "../assets/src_sounds_play.mp3";
 import wrong from "../assets/src_sounds_wrong.mp3";
 import correct from "../assets/src_sounds_correct.mp3";
 
-const Trivia = ({ data, setStop, questionNumber, setQuestionNumber }) => {
+const Trivia = ({ data, dataB, setStop, questionNumber, setQuestionNumber }) => {
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState("answer");
   const [letsPlay] = useSound(play);
   const [correctAnswer] = useSound(correct);
   const [wrongAnswer] = useSound(wrong);
+  const [list, setList] = useState({});
+
+  const choseList = () => {
+    const group = [data, dataB];
+
+    const gNumber = Math.floor(Math.random() * 2);
+
+    const qList = group[gNumber];
+
+    setList(qList);
+  };
 
   useEffect(() => {
     letsPlay();
   }, [letsPlay]);
 
   useEffect(() => {
-    setQuestion(data[questionNumber - 1]);
-  }, [data, questionNumber]);
+    choseList();
+  }, []);
+
+  useEffect(() => {
+    setQuestion(list[questionNumber - 1]);
+  }, [list, questionNumber]);
 
   const delay = (duration, callback) => {
     setTimeout(() => {
