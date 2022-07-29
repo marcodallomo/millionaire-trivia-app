@@ -206,7 +206,7 @@ const dataB = [
 
   {
     id: 10,
-    question: "in whih country you can find the city of Kota Kinabalu ?",
+    question: "in which country you can find the city of Kota Kinabalu ?",
     answers: [
       {
         text: "Philippines",
