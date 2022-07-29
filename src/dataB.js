@@ -114,7 +114,7 @@ const dataB = [
 
   {
     id: 6,
-    question: "Which of theses country doesn't share borders with Poland ?",
+    question: "Which of these country doesn't share borders with Poland ?",
     answers: [
       {
         text: "Belarus",
